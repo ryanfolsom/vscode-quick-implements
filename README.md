@@ -2,6 +2,8 @@
 
 <img src="images/icon.png" height="128" width="128">
 
+[Install through the Marketplace](https://marketplace.visualstudio.com/items?itemName=folsom-sh.quick-implements)
+
 Quickly view and navigate to interface/abstract class implementations with an inline indicator in Visual Studio Code.
 
 ## Features
