@@ -2,8 +2,8 @@
     "name": "quick-implements",
     "displayName": "Quick Implements",
     "description": "Quickly view and navigate to interface/abstract class implementations with an inline indicator",
-    "version": "0.0.1",
-    "publisher": "ryanfolsom",
+    "version": "1.0.0",
+    "publisher": "folsom-sh",
     "icon": "images/icon.png",
     "repository": {
         "type": "git",

@@ -1,10 +1,12 @@
 # Quick Implements
 
-<img src="images/icon.svg" height="128" width="128">
+<img src="images/icon.png" height="128" width="128">
 
 Quickly view and navigate to interface/abstract class implementations with an inline indicator in Visual Studio Code.
 
 ## Features
+
+![demo](images/demo.gif)
 
 - Displays an inline indicator showing the number of implementations for interfaces and abstract classes.
 - Supports multiple languages including Go, Java, TypeScript, C#, Python, and Rust.
