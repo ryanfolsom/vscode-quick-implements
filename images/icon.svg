@@ -1,0 +1,23 @@
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect x="0" y="0" width="128" height="128" rx="16" fill="#2C2C32"/>
+    
+    <!-- Lightning bolt (speed) -->
+    <path d="M64 20 L40 64 H58 L54 108 L88 64 H70 L74 20z" 
+          fill="#FFD700" 
+          stroke="#1E1E1E" 
+          stroke-width="2"/>
+    
+    <!-- Interface brackets -->
+    <path d="M30 40 L40 40 L40 88 L30 88" 
+          stroke="#4EC9B0" 
+          stroke-width="8" 
+          fill="none" 
+          stroke-linecap="round"/>
+    
+    <path d="M98 40 L88 40 L88 88 L98 88" 
+          stroke="#4EC9B0" 
+          stroke-width="8" 
+          fill="none" 
+          stroke-linecap="round"/>
+</svg>

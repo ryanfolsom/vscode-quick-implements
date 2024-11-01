@@ -1,0 +1,88 @@
+{
+    "name": "quick-implements",
+    "displayName": "Quick Implements",
+    "description": "Quickly view and navigate to interface/abstract class implementations with an inline indicator",
+    "version": "0.0.1",
+    "publisher": "ryanfolsom",
+    "icon": "images/icon.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ryanfolsom/vscode-quick-implements"
+    },
+    "engines": {
+        "vscode": "^1.95.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Other"
+    ],
+    "keywords": [
+        "interface",
+        "implementation",
+        "navigation",
+        "peek",
+        "go",
+        "java",
+        "typescript",
+        "csharp",
+        "python",
+        "rust",
+        "oop",
+        "codelens"
+    ],
+    "activationEvents": [
+        "onLanguage:go",
+        "onLanguage:java",
+        "onLanguage:typescript",
+        "onLanguage:csharp",
+        "onLanguage:python",
+        "onLanguage:rust"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "configuration": {
+            "title": "Quick Implements",
+            "properties": {
+                "quickImplements.supportedLanguages": {
+                    "type": "array",
+                    "default": [
+                        "go",
+                        "java",
+                        "typescript",
+                        "csharp",
+                        "python",
+                        "rust"
+                    ],
+                    "description": "Languages that should show implementation indicators"
+                },
+                "quickImplements.interfacePatterns": {
+                    "type": "object",
+                    "default": {
+                        "go": "type\\s+(\\w+)\\s+interface\\s*{",
+                        "java": "(interface|abstract\\s+class)\\s+(\\w+)",
+                        "typescript": "(interface|abstract\\s+class)\\s+(\\w+)",
+                        "csharp": "(interface|abstract\\s+class)\\s+(\\w+)",
+                        "python": "class\\s+(\\w+)\\s*\\([^)]*\\)\\s*:",
+                        "rust": "trait\\s+(\\w+)"
+                    },
+                    "description": "Regular expressions to identify interface-like declarations in each language"
+                }
+            }
+        },
+        "commands": [
+            {
+                "command": "quick-implements.showImplementations",
+                "title": "Quick Implements: Show Implementations"
+            }
+        ]
+    },
+    "scripts": {
+        "compile": "tsc -p ./src --outDir ./out",
+        "watch": "tsc -watch -p ./"
+    },
+    "devDependencies": {
+        "@types/node": "22.8.6",
+        "@types/vscode": "^1.95.0",
+        "typescript": "^5.6.3"
+    }
+}
