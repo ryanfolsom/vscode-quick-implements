@@ -58,7 +58,7 @@
                 "quickImplements.interfacePatterns": {
                     "type": "object",
                     "default": {
-                        "go": "(?:type\\s+|\\s+)(\\w+)\\s+interface\\s*{",
+                        "go": "(?:type\\s+|\\s+)(\\w+|\\w+\\[[\\w\\*\\,\\.\\s]+\\])\\s+interface\\s*{",
                         "java": "(interface|abstract\\s+class)\\s+(\\w+)",
                         "typescript": "(interface|abstract\\s+class)\\s+(\\w+)",
                         "csharp": "(interface|abstract\\s+class)\\s+(\\w+)",
