@@ -10,7 +10,7 @@
         "url": "https://github.com/ryanfolsom/vscode-quick-implements"
     },
     "engines": {
-        "vscode": "^1.97.0"
+        "vscode": "^1.106.1"
     },
     "categories": [
         "Programming Languages",
