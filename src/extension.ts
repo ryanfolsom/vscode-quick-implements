@@ -96,13 +96,6 @@ async function findImplementations(position: vscode.Position): Promise<vscode.Lo
             return [];
         }
 
-        // Check if the language server is ready
-        const languageId = vscode.window.activeTextEditor.document.languageId;
-        if (!await isLanguageServerReady(languageId)) {
-            console.log(`Language server for ${languageId} is not ready`);
-            return [];
-        }
-
         const implementations = await vscode.commands.executeCommand<vscode.Location[]>(
             'vscode.executeImplementationProvider',
             vscode.window.activeTextEditor.document.uri,
@@ -116,19 +109,6 @@ async function findImplementations(position: vscode.Position): Promise<vscode.Lo
         console.error('Error finding implementations:', error);
         return [];
     }
-}
-
-async function isLanguageServerReady(languageId: string): Promise<boolean> {
-    // Wait briefly for language server to initialize
-    return new Promise<boolean>((resolve) => {
-        setTimeout(() => {
-            // Check if there are registered implementation providers
-            const providers = vscode.languages.getLanguages().then(languages => 
-                languages.includes(languageId)
-            );
-            resolve(true);
-        }, 1000);
-    });
 }
 
 async function showImplementationsQuickPick(locations: vscode.Location[]) {
